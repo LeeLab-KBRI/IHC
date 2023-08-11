@@ -14,7 +14,7 @@ title = substring(title,0,lengthOf(title)-4);
 
 path = getDirectory("image");
 jpegTitle = title + "_" + "FITC" + number_prefix + number;
-smalljpegTitle = "small_" + title + "_" + color + number_prefix + number;
+smalljpegTitle = "small_" + title + "_" + "FITC" + number_prefix + number;
 
 run("Copy");
 run("Internal Clipboard");
@@ -42,7 +42,7 @@ title = substring(title,0,lengthOf(title)-4);
 
 path = getDirectory("image");
 jpegTitle = title + "_" + "DAPI" + number_prefix + number;
-smalljpegTitle = "small_" + title + "_" + color + number_prefix + number;
+smalljpegTitle = "small_" + title + "_" + "DAPI" + number_prefix + number;
 
 run("Copy");
 run("Internal Clipboard");
