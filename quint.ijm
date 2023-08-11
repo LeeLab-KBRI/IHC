@@ -6,11 +6,15 @@ title = getTitle();
 title = getInfo ("image.filename");
 selectImage(id);
 
+number_prefix = "_s00";
+if (number > 9) number_prefix = substring(number_prefix,0,lengthOf(number_prefix)-1);
+
+
 title = substring(title,0,lengthOf(title)-4);
 
 path = getDirectory("image");
-jpegTitle = title + "_" + "FITC" + "_s0" + number;
-smalljpegTitle = "small_" + title + "_" + color + "_s0" + number;
+jpegTitle = title + "_" + "FITC" + number_prefix + number;
+smalljpegTitle = "small_" + title + "_" + color + number_prefix + number;
 
 run("Copy");
 run("Internal Clipboard");
@@ -31,11 +35,14 @@ title = getTitle();
 title = getInfo ("image.filename");
 selectImage(id);
 
+number_prefix = "_s00";
+if (number > 9) number_prefix = substring(number_prefix,0,lengthOf(number_prefix)-1);
+
 title = substring(title,0,lengthOf(title)-4);
 
 path = getDirectory("image");
-jpegTitle = title + "_" + "DAPI" + "_s0" + number;
-smalljpegTitle = "small_" + title + "_" + color + "_s0" + number;
+jpegTitle = title + "_" + "DAPI" + number_prefix + number;
+smalljpegTitle = "small_" + title + "_" + color + number_prefix + number;
 
 run("Copy");
 run("Internal Clipboard");
